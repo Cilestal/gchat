@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * @author Michael Lang
  * @version 1.0
  */
-public class ConsoleClient {
+public class ConsoleClientExample {
     public static void main(String[] args) throws Exception {
 
         Client client = new Client("127.0.0.1", 5454, "Michael3", "1111");
