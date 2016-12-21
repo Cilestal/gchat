@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<user_list>
+    <user>
+        <id>1</id>
+        <login>Alex</login>
+        <password>594c44ffe3a789f8d0416de7118095afdf2063dab017ca42e52b13afddf57dd4</password>
+        <salt>e037d18fd9462e60</salt>
+    </user>
+    <user>
+        <id>2</id>
+        <login>Michael</login>
+        <password>e72868fcf6e2b6689efd4611c9792ee53ff2b87d0699f5e0bcf020e17c01ff30</password>
+        <salt>34eead04bf13c7df</salt>
+    </user>
+</user_list>

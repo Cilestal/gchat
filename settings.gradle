@@ -1,0 +1,4 @@
+rootProject.name = 'gchat'
+include 'server'
+include 'client'
+

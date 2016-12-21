@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="409.0" stylesheets="@css/JMetroLightTheme.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TextField fx:id="loginField" layoutX="103.0" layoutY="43.0" prefHeight="25.0" prefWidth="270.0" />
+        <PasswordField fx:id="passwordField" layoutX="103.0" layoutY="87.0" prefHeight="24.0" prefWidth="270.0" />
+        <Text fx:id="loginText" layoutX="58.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%login_text" />
+        <Text fx:id="passwordText" layoutX="37.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%password_text" />
+        <Button fx:id="authButton" defaultButton="true" layoutX="266.0" layoutY="128.0" mnemonicParsing="false" onAction="#buttonSignInAction" prefHeight="31.0" prefWidth="107.0" text="%auth_button" />
+        <Button fx:id="registerButton" layoutX="151.0" layoutY="128.0" mnemonicParsing="false" onAction="#buttonSignUpAction" prefHeight="31.0" prefWidth="107.0" text="%register_button" />
+        <MenuBar layoutX="-1.0" layoutY="2.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
+            <menus>
+                <Menu fx:id="menu" mnemonicParsing="false" text="%language_menu">
+                    <items>
+                        <MenuItem id="EN" mnemonicParsing="false" onAction="#changeLanguage" text="EN" />
+                        <MenuItem id="RU" mnemonicParsing="false" onAction="#changeLanguage" text="RU" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ProgressIndicator fx:id="progressIndicator" layoutX="56.0" layoutY="121.0" prefHeight="46.0" prefWidth="48.0" visible="false" />
+        <Text fx:id="errorField" fill="#ff0707" layoutX="18.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" visible="true" wrappingWidth="119.91796875" />
+    </children>
+</fx:root>

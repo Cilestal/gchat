@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="409.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TextField fx:id="loginField" layoutX="103.0" layoutY="63.0" prefHeight="25.0" prefWidth="270.0" />
+        <PasswordField fx:id="passwordField" layoutX="103.0" layoutY="107.0" prefHeight="24.0" prefWidth="270.0" />
+        <Text fx:id="loginText" layoutX="58.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%login_text" />
+        <Text fx:id="passwordText" layoutX="37.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%password_text" />
+        <Button fx:id="authButton" defaultButton="true" layoutX="286.0" layoutY="149.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="41.0" prefWidth="87.0" text="%password_button" />
+        <MenuBar layoutX="-1.0" layoutY="2.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="%language_menu">
+                    <items>
+                        <MenuItem id="EN" mnemonicParsing="false" onAction="#changeLanguage" text="EN" />
+                        <MenuItem id="RU" mnemonicParsing="false" onAction="#changeLanguage" text="RU" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <ProgressIndicator fx:id="progressIndicator" layoutX="147.0" layoutY="150.0" visible="false" />
+      <Text fx:id="errorField" fill="#ff0707" layoutX="50.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Error Field" visible="false" />
+    </children>
+</fx:root>

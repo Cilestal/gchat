@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="server-title">Server</entry>
+    <entry key="ports">6868,5454</entry>
+    <entry key="welcome-message">, welcome you!</entry>
+    <entry key="show-welcome-message">true</entry>
+    <entry key="buffer-size">1024</entry>
+</properties>
