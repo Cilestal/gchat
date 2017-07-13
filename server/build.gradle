@@ -4,7 +4,6 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 
 def outPath = "$rootDir/out/server/"
-def libOutputDir = "libs"
 def extresOutputDir = "res"
 def extresPath = "$projectDir/src/main/extres"
 
@@ -19,21 +18,15 @@ dependencies {
 compileJava.options.encoding = 'UTF-8'
 
 jar {
-    libsDirName = outPath;
+    libsDirName = outPath
 
     manifest {
-        attributes 'Main-Class': 'org.ml.gchat.ConsoleServer',
-                'Class-Path': configurations.runtime.files.collect { "libs/$it.name" }.join(' ')
+        attributes 'Main-Class': 'dp.ua.michaellang.gchat.ConsoleServer'
     }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 
-build.dependsOn('copyToLib')
 build.dependsOn('copyToRes')
-
-task copyToLib(type: Copy) {
-    into outPath + libOutputDir
-    from configurations.runtime
-}
 
 task copyToRes(type: Copy) {
     into outPath + extresOutputDir

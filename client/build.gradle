@@ -1,11 +1,9 @@
-group 'org.ml'
+group 'dp.ua.michaellang.gchat'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
 def outPath = "$rootDir/out/client/"
-def libOutputDir = "libs"
-def extresOutputDir = "res"
 def extresPath = "$projectDir/src/main/extres"
 
 sourceCompatibility = 1.8
@@ -19,24 +17,20 @@ dependencies {
 compileJava.options.encoding = 'UTF-8'
 
 jar {
-    libsDirName = outPath;
+    libsDirName = outPath
 
     manifest {
-        attributes 'Main-Class': 'org.ml.gchat.fxclient.ClientApplication',
-                'Class-Path': configurations.runtime.files.collect { "libs/$it.name" }.join(' ')
+        attributes 'Main-Class': 'dp.ua.michaellang.gchat.fxclient.ClientApplication'
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }
 
-build.dependsOn('copyToLib')
 build.dependsOn('copyToRes')
-
-task copyToLib(type: Copy) {
-    into outPath + libOutputDir
-    from configurations.runtime
-}
-
 task copyToRes(type: Copy) {
-    into outPath + extresOutputDir
+    into outPath
     from extresPath
 }
 
