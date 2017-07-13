@@ -27,7 +27,7 @@ import java.util.Timer;
  * @author Michael Lang
  * @version 1.0
  */
-public class MainController implements Initializable{
+public class MainController implements Initializable {
     public static final String CLIENT_FXML = "/sample/client.fxml";
 
     private Client client;
@@ -37,7 +37,7 @@ public class MainController implements Initializable{
     private TextField messageField;
 
     @FXML
-    private ListView<Message> messageBox;
+    private ListView<String> messageBox;
 
     public MainController(Client client) {
         this.client = client;
@@ -76,13 +76,34 @@ public class MainController implements Initializable{
         timeline.play();
     }
 
-
-    private void readMessages(){
+    private void readMessages() {
         Iterator<Message> iterator = client.getMessages().iterator();
 
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Message next = iterator.next();
-            messageBox.getItems().add(next);
+            String message = "";
+
+            switch (next.getCommand()) {
+                case PUBLIC_MESSAGE:
+                case PRIVATE_MESSAGE:
+                    message = String.format("%s(%tT): %s",
+                            next.getUser(), next.getDate(), next.getMessage());
+                    break;
+                case ERROR:
+                    break;
+                case ONLINE_USER:
+                    message = String.format("%s is online!", next.getMessage());
+                    break;
+                case DISCONECT_USER:
+                case USER_LOGOUT:
+                    message = String.format("%s is offline!", next.getMessage());
+                    break;
+                default:
+                    return;
+            }
+
+            messageBox.getItems().add(message);
+
             iterator.remove();
         }
     }
