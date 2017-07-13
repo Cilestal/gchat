@@ -20,5 +20,5 @@ List of console commands:
 -exit
 ```
 ## Client
-![alt text](https://github.com/Cilestal/gchat/blob/master/screenshots/1.png)
-![alt text](https://github.com/Cilestal/gchat/blob/master/screenshots/2.png)
+![alt text](https://github.com/Cilestal/gchat/blob/master/screenshots/1.jpg)
+![alt text](https://github.com/Cilestal/gchat/blob/master/screenshots/2.jpg)
