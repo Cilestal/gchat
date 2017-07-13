@@ -215,7 +215,7 @@ public class AuthController {
         this.registerButton.setText(MessageManager.getMessage("register_button"));
         this.menu.setText(MessageManager.getMessage("language_menu"));
 
-        if(errorFieldMessage != null){
+        if (errorFieldMessage != null) {
             this.errorField.setText(MessageManager.getMessage(errorFieldMessage));
         }
     }
