@@ -8,4 +8,6 @@ To build the entire Gradle project, you should run the following in the root of 
 ```./gradlew server:build```<br>
 <b>Build client</b><br>
 ```./gradlew client:build```<br>
+## Server
 
+## Client
