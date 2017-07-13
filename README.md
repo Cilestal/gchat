@@ -1,6 +1,5 @@
 # gchat
 Simple Java NIO client-server chat<br>
-<br>
 ## Build projects
 To build the entire Gradle project, you should run the following in the root of the checkout.<br>
 ```./gradlew build```<br>
@@ -21,3 +20,5 @@ List of console commands:
 -exit
 ```
 ## Client
+![alt text](https://raw.githubusercontent.com/Cilestal/gchat/master/screenshots/1.png)
+![alt text](https://raw.githubusercontent.com/Cilestal/gchat/master/screenshots/2.png)
