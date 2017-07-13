@@ -8,7 +8,7 @@
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="646.0" stylesheets="@css/JMetroLightTheme.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Button defaultButton="true" layoutX="477.0" layoutY="408.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="38.0" prefWidth="129.0" text="%send_button" />
-        <ListView fx:id="messageBox" editable="true" layoutX="55.0" layoutY="40.0" prefHeight="310.0" prefWidth="551.0" />
+        <ListView fx:id="messageBox" editable="true" layoutX="55.0" layoutY="40.0" prefHeight="339.0" prefWidth="566.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0" />
         <TextField fx:id="messageField" layoutX="55.0" layoutY="408.0" prefHeight="38.0" prefWidth="405.0" promptText="%enter_message_text">
             <font>
                 <Font size="13.0" />
