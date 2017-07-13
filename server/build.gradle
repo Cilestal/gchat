@@ -4,7 +4,6 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 
 def outPath = "$rootDir/out/server/"
-def extresOutputDir = "res"
 def extresPath = "$projectDir/src/main/extres"
 
 sourceCompatibility = 1.8
@@ -29,6 +28,6 @@ jar {
 build.dependsOn('copyToRes')
 
 task copyToRes(type: Copy) {
-    into outPath + extresOutputDir
+    into outPath
     from extresPath
 }
